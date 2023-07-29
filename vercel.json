@@ -1,0 +1,13 @@
+{
+    "name": "Portal_de_Consultas",
+    "version": 2,
+    "public": true,
+    "build":{
+        "src":"api/server.js",
+        "use": "@vercel/node"
+    },
+    "routes":[{
+        "src":"/(.*)",
+        "dest": "api/server.js"
+    }]
+}
