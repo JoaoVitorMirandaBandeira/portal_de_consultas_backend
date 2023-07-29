@@ -1,4 +1,4 @@
-export default function valorLiquido(url, user, passWord, idLan, codColigada) {
+function valorLiquido(url, user, passWord, idLan, codColigada) {
     const https = require('https')
     const http = require('http'); // Use the 'https' module instead of 'http'
     const x2jsrequire = require('x2js');
@@ -80,3 +80,4 @@ export default function valorLiquido(url, user, passWord, idLan, codColigada) {
     };
     return myAction();
 }
+module.exports = valorLiquido

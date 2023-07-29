@@ -1,9 +1,8 @@
-import valorLiquido from "../valorLiquido.js";
-import bodyParser from "body-parser";
-import express from "express";
+const valorLiquido = require("../valorLiquido")
+const express = require("express")
 
 const app = express();
-app.use(bodyParser.json());
+app.use(express.json());
 
 app.get("/valorLiquido", async (req, res) => {
     try{

@@ -16,6 +16,5 @@
   "main": "api/server.js",
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "type": "module"
+  "license": "ISC"
 }
