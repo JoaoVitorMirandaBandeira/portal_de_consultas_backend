@@ -1,0 +1,29 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tot="http://www.totvs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tot:SaveRecord>
+         <!--Optional:-->
+         <tot:DataServerName>GlbConsSqlData</tot:DataServerName>
+         <!--Optional:-->
+         <tot:XML><![CDATA[
+            <GlbConsSql>
+              <GConsSql>
+                  <CODCOLIGADA>0</CODCOLIGADA>
+                  <APLICACAO>S</APLICACAO>
+                  <CODSENTENCA>RB.PS</CODSENTENCA>
+                  <TITULO>Teste</TITULO>
+                  <SENTENCA>Select * from ppessoa</SENTENCA>  
+                  <DISPONIVELFILTRO>1</DISPONIVELFILTRO>
+                  <DISPONIVELRELATORIO>1</DISPONIVELRELATORIO>
+                  <DISPONIVELVISAO>1</DISPONIVELVISAO>
+                  <DISPONIVELMENU>0</DISPONIVELMENU>
+                  <SEMSEGCOLUNAS>0</SEMSEGCOLUNAS>
+                  <SEMSEGESTENDIDA>0</SEMSEGESTENDIDA>
+              </GConsSql>
+               </GlbConsSql>]]>
+         </tot:XML>
+         <!--Optional:-->
+         <tot:Contexto>codcoligada=1;codfilial=1;codsistema=s;codusuario=rubeus</tot:Contexto>
+      </tot:SaveRecord>
+   </soapenv:Body>
+</soapenv:Envelope>

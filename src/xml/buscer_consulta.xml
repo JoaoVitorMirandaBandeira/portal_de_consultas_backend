@@ -1,0 +1,13 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:tot="http://www.totvs.com/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <tot:ReadRecord>
+         <!--Optional:-->
+         <tot:DataServerName>GlbConsSqlData</tot:DataServerName>
+         <!--Optional:-->
+         <tot:PrimaryKey>0;S;RB.PS</tot:PrimaryKey>
+         <!--Optional:-->
+         <tot:Contexto>codcoligada=1;codfilial=1;codsistema=s;codusuario=rubeus</tot:Contexto>
+      </tot:ReadRecord>
+   </soapenv:Body>
+</soapenv:Envelope>
