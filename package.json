@@ -4,6 +4,9 @@
     "express": "^4.18.2",
     "http": "^0.0.1-security",
     "https": "^1.0.0",
+    "pg": "^8.11.2",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.32.1",
     "vercel": "^31.2.0",
     "x2js": "^3.4.4"
   },
@@ -16,5 +19,8 @@
   "main": "api/server.js",
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }

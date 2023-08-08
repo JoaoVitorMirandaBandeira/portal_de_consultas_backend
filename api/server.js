@@ -2,10 +2,11 @@ const valorLiquido = require("../src/conect-tbc/valorLiquido")
 const buscarConsulta = require("../src/conect-tbc/buscarConsulta")
 const express = require("express");
 const salvarConsulta = require("../src/conect-tbc/salvarConsulta");
+const UserRouter = require('../src/router/user')
 
 const app = express();
 app.use(express.json());
-
+app.use(UserRouter)
 app.get("/valorLiquido", async (req, res) => {
     try {
         const { url, user, passWord, idlan, codcoligada } = req.body;
