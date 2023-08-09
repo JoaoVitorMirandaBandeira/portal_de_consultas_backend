@@ -11,7 +11,7 @@ module.exports = {
   dialectOptions: {
     ssl: {
       require: true,
-      rejectUnauthorized: false, // You might need to adjust this based on your setup
-    },
-  },
+      rejectUnauthorized: false // Este é específico para conexões com o banco de dados na Vercel
+    }
+  }
 };

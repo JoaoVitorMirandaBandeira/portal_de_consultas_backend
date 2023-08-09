@@ -36,6 +36,6 @@ app.post("/consulta", async (req, res) => {
     }
 })
 
-app.listen(3000, () => {
-    console.log("Servidor iniciado na porta 3000");
+app.listen(8070, () => {
+    console.log("Servidor iniciado na porta 8000");
 });

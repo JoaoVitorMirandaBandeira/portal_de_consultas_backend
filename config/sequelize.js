@@ -1,8 +1,19 @@
-//Instanciando o Sequelize
-const Sequelize = require("sequelize")
-//Puxar as cunfigurações do arquivo config.js
-const databese = require("./config")
-//Criar um objeto sequelize com as configs do banco
-const sequelize = new Sequelize(database)
-//Exportar as configuraçoes da conecção com o banco
-module.exports = sequelize
+const Sequelize = require('sequelize');
+const database = require('./config');
+
+const sequelize = new Sequelize(database.database, database.username, database.password, {
+    host: database.host,
+    port: database.port,
+    dialect: database.dialect,
+    define: {
+        timestamps: database.define.timestamps,
+    },
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    }
+});
+
+module.exports = sequelize;
