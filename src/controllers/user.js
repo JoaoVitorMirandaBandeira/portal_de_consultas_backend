@@ -5,7 +5,7 @@ const bcrypt = require('bcrypt');
 
 module.exports = {
     async store(req, res) {
-        const { name, email, password } = req.body
+        const { name, email, password} = req.body
         try {
             const user = await User.findOne({
                 where: {
@@ -14,16 +14,15 @@ module.exports = {
             })
             if (user) throw new Error(`Usuario ja existente`)
             let passwordCriptografada = await criptografarSenhaUser(password)
-            const newUser = await User.create({ name, email, password: passwordCriptografada })
+            const newUser = await User.create({ name, email, password: passwordCriptografada, status: false, permissions: 1})
             newUser.password = undefined
-            const token = createToken(newUser)
             return res.status(201).json({ user, token })
         } catch (error) {
             return res.status(500).json({ message: error.message })
         }
     },
     async get(req, res) {
-        const { email, password } = req.body
+        const { email, password} = req.body
         try {
             const user = await User.findOne({
                 where: {
